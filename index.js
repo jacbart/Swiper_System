@@ -9,6 +9,6 @@ $(document).ready(function()
 	$("#start").fadeIn("slow");
 	$("#start").click(function()
 	{
-		
+		$("#start").effect("fade");
 	});
 });
