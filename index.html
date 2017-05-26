@@ -32,25 +32,87 @@
 
 <body>
 	<div class="container">
+		<div class="row">
+			<nav class="navbar navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">
+							<img src="CU-Buffs.png">
+						</a>
+					</div>
+					<h3>Walk-In Computer Support</h3>
+				</div>
+			</nav>
+		</div>
 		<div class="row"
-			 style="padding-top:6em">
+			 style="padding-top:8em">
 			<div class="text-center">
 				<button type="button"
 						class="btn btn-success btn-lg"
-						style="font-size:100px; display:none; padding-top:1em; padding-bottom:1em; padding-left:5em; padding-right:5em;"
+						style="font-size:100px; display:none; padding-top:0.5em; padding-bottom:0.5em; padding-left:5em; padding-right:5em;"
 						id="start">
 					Start
 				</button>
+			</div>
+			<!-- Customer queue: Needs to be dynamic -->
+			<div class="col-md-6 panel panel-default"
+				 style="margin-top:1em; display:none; margin-right:5em"
+				 id="qpan">
+				<div class="panel-heading">
+					Current Queue:
+				</div>
+				<div class="list-group">
+					<button type="button"
+							class="list-group-item">
+						Jack Bartlett
+					</button>
+					<button type="button"
+							class="list-group-item">
+						Shane Kroening
+					</button>
+					<button type="button" 
+							class="list-group-item">
+						Ray Bhat
+					</button>
+				</div>
+			</div>
+			<!-- Information for the user about GDS -->
+			<div class="col-md-5 jumbotron"
+				 style="margin-top:1em; display:none;"
+				 id="cusinfo">
+				<ul>
+					<li>Our hours of operation are 8:00 AM to 4:30 PM.</li>
+					<li>Your Buff OneCard is required for service.</li>
+					<li>Data backups are your responsiblity! You may request OIT to preform a data backup on your behalf. Please help you technician understand where and how you store your data to ensure a complete backup. OIT is not responsible for loss of data or software.</li>
+				</ul>
 			</div>
 			<!-- user agreement -->
 			<div>
 				
 			</div>
 			<!-- OS selection -->
-			<div class="col-md-3">
+			<div class="col-md-4 text-center">
 				<button type="button"
-						class="">
-					
+						class="btn btn-default btn-lg"
+						style="font-size:50px; display:none; padding-top:1em; padding-bottom:1em; padding-left:1em; padding-right:1em; margin-top:2em;"
+						id="mac">
+					MacOS
+				</button>
+			</div>
+			<div class="col-md-4 text-center">
+				<button type="button"
+						class="btn btn-default btn-lg"
+						style="font-size:50px; display:none; padding-top:1em; padding-bottom:1em; padding-left:1em; padding-right:1em; margin-top:2em;"
+						id="win">
+					Windows
+				</button>
+			</div>
+			<div class="col-md-4 text-center">
+				<button type="button"
+						class="btn btn-default btn-lg"
+						style="font-size:50px; display:none; padding-top:1em; padding-bottom:1em; padding-left:1em; padding-right:1em; margin-top:2em;"
+						id="otheros">
+					Other
 				</button>
 			</div>
 			<!-- nature of issue -->
