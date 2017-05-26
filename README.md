@@ -4,9 +4,10 @@
 		* Queue of customers
 	2. User Agreement
 	3. Selection Pages
-		* OS selection page
+		* ~~OS selection page~~
 		* nature of issue selection page
 		* if other is selected have ability to type out short description of issue
 
 ---
 # DONE:
+	* OS selection page
