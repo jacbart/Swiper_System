@@ -2,13 +2,14 @@ $(document).ready(function()
 {
 	var delay=1000;
 
-	// Instructions popover menu call
-	$("#instr").popover();
-
-	// Initial fade in of buttons
+	// Initial fade in of start button
 	$("#start").fadeIn("slow");
 	$("#start").click(function()
 	{
 		$("#start").effect("fade");
+		setTimeout(function(){
+			//Fade in new buttons
+			
+		}, delay)
 	});
 });
