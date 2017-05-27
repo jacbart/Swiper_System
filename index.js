@@ -72,4 +72,58 @@ $(document).ready(function()
 			$("#otherissue").show("blind");
 		}, delay);
 	});
+
+	// Virus button
+	$("#virus").click(function(){
+		// Fade out virus, email, otherissue buttons
+		$("#virus").hide("blind");
+		$("#email").hide("blind");
+		$("#otherissue").hide("blind");
+		setTimeout(function(){
+			// Fade in fin button
+			$("#fin").show("blind")
+		}, delay);
+	});
+
+	// Email button
+	$("#email").click(function(){
+		// Fade out virus, email, otherissue buttons
+		$("#virus").hide("blind");
+		$("#email").hide("blind");
+		$("#otherissue").hide("blind");
+		setTimeout(function(){
+			// Fade in fin button
+			$("#fin").show("blind")
+		}, delay);
+	});
+
+	// Other issue button
+	$("#otherissue").click(function(){
+		// Fade out virus, email, otherissue buttons
+		$("#virus").hide("blind");
+		$("#email").hide("blind");
+		$("#otherissue").hide("blind");
+		setTimeout(function(){
+			// Fade in fin button
+			$("#fin").show("blind")
+		}, delay);
+	});
+
+	// Finish button: returns to start page
+	$("#fin").click(function(){
+		// Fade out fin button
+		$("#fin").hide("blind");
+		setTimeout(function(){
+			// Fade in start button
+			$("#start").show("fold");
+			// Delayed fade in of qpan list
+			setTimeout(function(){
+				$("#qpan").show("fold");
+			}, delay);
+			// Delayed fade in of cusinfo panel
+			setTimeout(function(){
+				$("#cusinfo").show("fold");
+			}, delay+210);
+		}, delay);
+	});
 });
