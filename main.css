@@ -1,7 +1,11 @@
 body
 {
+	/*set background image to flatirons.png*/
 	background-image: url('flatirons.png');
+	/*Sets the background image to cover the webpage*/
 	background-size: cover;
+	/*Sets the background to be fixed to the webpage*/
 	background-attachment: fixed;
+	/*makes the background non-repeating*/
 	background-repeat: no-repeat;
 }

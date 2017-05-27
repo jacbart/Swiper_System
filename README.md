@@ -7,7 +7,7 @@
 	3. Selection Pages
 		- [x] OS selection page
 		- [x] nature of issue selection page
-		- [ ] if other is selected have ability to type out short description of issue
+		- [ ] if other is selected in the nature of issue section, have ability to type out short description of the issue
 	4. Integrate with ServiceNow
 		- [ ] Create inc for the customer
 		- [ ] Fill in the nature of issue field on ServiceNow
