@@ -6,7 +6,7 @@
 		- [ ] Create a ULA page for the customer to accept
 	3. Selection Pages
 		- [x] OS selection page
-		- [ ] nature of issue selection page
+		- [x] nature of issue selection page
 		- [ ] if other is selected have ability to type out short description of issue
 	4. Integrate with ServiceNow
 		- [ ] Create inc for the customer

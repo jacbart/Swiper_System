@@ -23,4 +23,37 @@ $(document).ready(function()
 			$("#otheros").show("blind");
 		}, delay)
 	});
+
+	$("#mac").click(function(){
+		$("#mac").hide("blind");
+		$("#win").hide("blind");
+		$("#otheros").hide("blind");
+		setTimeout(function(){
+			$("#virus").show("blind");
+			$("#email").show("blind");
+			$("#otherissue").show("blind");
+		}, delay);
+	});
+
+	$("#win").click(function(){
+		$("#mac").hide("blind");
+		$("#win").hide("blind");
+		$("#otheros").hide("blind");
+		setTimeout(function(){
+			$("#virus").show("blind");
+			$("#email").show("blind");
+			$("#otherissue").show("blind");
+		}, delay);
+	});
+
+	$("#otheros").click(function(){
+		$("#mac").hide("blind");
+		$("#win").hide("blind");
+		$("#otheros").hide("blind");
+		setTimeout(function(){
+			$("#virus").show("blind");
+			$("#email").show("blind");
+			$("#otherissue").show("blind");
+		}, delay);
+	});
 });
