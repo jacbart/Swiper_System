@@ -27,7 +27,7 @@ $(document).ready(function()
 			//Fade in OS selection buttons
 			$("#mac").show("blind");
 			$("#win").show("blind");
-			$("#otheros").show("blind");
+			$("#otherOS").show("blind");
 		}, delay)
 	});
 
@@ -36,12 +36,13 @@ $(document).ready(function()
 		// Fade out mac, win, and otheros buttons
 		$("#mac").hide("blind");
 		$("#win").hide("blind");
-		$("#otheros").hide("blind");
+		$("#otherOS").hide("blind");
 		setTimeout(function(){
-			// Fade in virus, email, and otherissue buttons
+			// Fade in virus, email, bootfailure, and otherissue buttons
 			$("#virus").show("blind");
 			$("#email").show("blind");
-			$("#otherissue").show("blind");
+			$("#bootfailure").show("blind");
+			$("#otherIssue").show("blind");
 		}, delay);
 	});
 
@@ -50,35 +51,38 @@ $(document).ready(function()
 		// Fade out mac, win, and otheros buttons
 		$("#mac").hide("blind");
 		$("#win").hide("blind");
-		$("#otheros").hide("blind");
+		$("#otherOS").hide("blind");
 		setTimeout(function(){
-			// Fade in virus, email, and otherissue buttons
+			// Fade in virus, email, bootfailure, and otherissue buttons
 			$("#virus").show("blind");
 			$("#email").show("blind");
-			$("#otherissue").show("blind");
+			$("#bootfailure").show("blind");
+			$("#otherIssue").show("blind");
 		}, delay);
 	});
 
 	// Nature of issue for Other OS
-	$("#otheros").click(function(){
-		// Fade out mac, win, and otheros buttons
+	$("#otherOS").click(function(){
+		// Fade out mac, win, bootfailure, and otheros buttons
 		$("#mac").hide("blind");
 		$("#win").hide("blind");
-		$("#otheros").hide("blind");
+		$("#otherOS").hide("blind");
 		setTimeout(function(){
-			// Fade in virus, email, and otherissue buttons
+			// Fade in virus, email, bootfailure, and otherissue buttons
 			$("#virus").show("blind");
 			$("#email").show("blind");
-			$("#otherissue").show("blind");
+			$("#bootfailure").show("blind");
+			$("#otherIssue").show("blind");
 		}, delay);
 	});
 
 	// Virus button
 	$("#virus").click(function(){
-		// Fade out virus, email, otherissue buttons
+		// Fade out virus, email, bootfailure, and otherissue buttons
 		$("#virus").hide("blind");
+		$("#bootfailure").hide("blind");
 		$("#email").hide("blind");
-		$("#otherissue").hide("blind");
+		$("#otherIssue").hide("blind");
 		setTimeout(function(){
 			// Fade in fin button
 			$("#fin").show("blind")
@@ -87,22 +91,37 @@ $(document).ready(function()
 
 	// Email button
 	$("#email").click(function(){
-		// Fade out virus, email, otherissue buttons
+		// Fade out virus, email, bootfailure, and otherissue buttons
 		$("#virus").hide("blind");
 		$("#email").hide("blind");
-		$("#otherissue").hide("blind");
+		$("#bootfailure").hide("blind");
+		$("#otherIssue").hide("blind");
 		setTimeout(function(){
 			// Fade in fin button
 			$("#fin").show("blind")
 		}, delay);
 	});
 
+	// Boot Failure button
+	$("#bootfailure").click(function(){
+		// Fade out virus, email, bootfailure, and otherissue buttons
+		$("#virus").hide("blind");
+		$("#bootfailure").hide("blind");
+		$("#email").hide("blind");
+		$("#otherIssue").hide("blind");
+		setTimeout(function(){
+			//Fade in fin button
+			$("#fin").show("blind");
+		}), delay;
+	});
+
 	// Other issue button
-	$("#otherissue").click(function(){
-		// Fade out virus, email, otherissue buttons
+	$("#otherIssue").click(function(){
+		// Fade out virus, email, bootfailure, and otherissue buttons
 		$("#virus").hide("blind");
 		$("#email").hide("blind");
-		$("#otherissue").hide("blind");
+		$("#bootfailure").hide("blind");
+		$("#otherIssue").hide("blind");
 		setTimeout(function(){
 			// Fade in fin button
 			$("#fin").show("blind")
