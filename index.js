@@ -1,7 +1,7 @@
 $(document).ready(function()
 {
 	// delay variable for fading in or out objects
-	var delay=500;
+	var delay=600;
 
 	// Initial fade in of start button
 	$("#start").show("fold");
@@ -14,7 +14,7 @@ $(document).ready(function()
 	// Delayed fade in of customer information
 	setTimeout(function(){
 		$("#cusinfo").show("fold");
-	}, delay+210);
+	}, delay+200);
 
 	// Start button trigger
 	$("#start").click(function()
@@ -24,11 +24,21 @@ $(document).ready(function()
 		$("#cusinfo").hide("blind");
 		$("#start").hide("blind");
 		setTimeout(function(){
+			// Fade in the EULA
+			$("#eula").show("blind");
+		}, delay);
+	});
+
+	// Next button for the EULA
+	$("#eulaNext").click(function(){
+		// Fade out EULA
+		$("#eula").hide("blind");
+		setTimeout(function(){
 			//Fade in OS selection buttons
 			$("#mac").show("blind");
 			$("#win").show("blind");
 			$("#otherOS").show("blind");
-		}, delay)
+		}, delay);
 	});
 
 	// Nature of issue for MacOS
