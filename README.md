@@ -3,7 +3,7 @@
 		- [ ] add ability to enter Identikey
 		- [ ] Queue of customers
 	2. User Agreement
-		- [x] Create a ULA page for the customer to accept
+		- [x] Create a EULA page for the customer to accept
 	3. Selection Pages
 		- [x] OS selection page
 		- [x] nature of issue selection page
