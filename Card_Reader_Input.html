@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <script>
-  var id = "";
-document.onkeydown = function(event) {
-	var key_code = event.keyCode;
+	var id = "";
+	document.onkeydown = function(event)
+	{
+		var key_code = event.keyCode;
 
-  if (95 < key_code) {
-    key_code = key_code-48;
-  }	
+		if (95 < key_code)
+		{
+			key_code = key_code-48;
+		}	
 	
-  if (key_code == 13){
-    id += "-Done"
-	document.getElementById('id_out').innerHTML = id;
-  }
-  else {
-    id += String.fromCharCode(key_code);
-  }
-}
-
-
+		if (key_code == 13)
+		{
+			id += "-Done"
+			document.getElementById('id_out').innerHTML = id;
+		}
+		else
+		{
+			id += String.fromCharCode(key_code);
+		}
+	}
 </script>
 
 <p id="id_out">UUID:</p>
