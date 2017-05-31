@@ -24,10 +24,22 @@ $(document).ready(function()
 		$("#cusinfo").hide("blind");
 		$("#start").hide("blind");
 		setTimeout(function(){
+			// Fade in the Swipe page
+			$("#swipe").show("blind");
+		}, delay);
+	});
+
+	// Swipe Buff Onecard page
+	$("#identikey").click(function()
+	{
+		// Fade out swipe
+		$("#swipe").hide("blind");
+		setTimeout(function(){
 			// Fade in the EULA
 			$("#eula").show("blind");
 		}, delay);
 	});
+
 
 	// Next button for the EULA
 	$("#eulaNext").click(function(){
