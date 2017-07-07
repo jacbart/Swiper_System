@@ -34,6 +34,7 @@ $(document).ready(function()
 	{
 		// Fade out swipe
 		$("#swipe").hide("blind");
+		$('#theprogressbar').attr('aria-valuenow', '25%').css('width','25%');
 		setTimeout(function(){
 			// Fade in the EULA
 			$("#eula").show("blind");
@@ -45,6 +46,7 @@ $(document).ready(function()
 	$("#eulaNext").click(function(){
 		// Fade out EULA
 		$("#eula").hide("blind");
+		$('#theprogressbar').attr('aria-valuenow', '50%').css('width','50%');
 		setTimeout(function(){
 			//Fade in OS selection buttons
 			$("#mac").show("blind");
@@ -59,6 +61,7 @@ $(document).ready(function()
 		$("#mac").hide("blind");
 		$("#win").hide("blind");
 		$("#otherOS").hide("blind");
+		$('#theprogressbar').attr('aria-valuenow', '75%').css('width','75%');
 		setTimeout(function(){
 			// Fade in virus, email, bootfailure, and otherissue buttons
 			$("#virus").show("blind");
@@ -74,6 +77,7 @@ $(document).ready(function()
 		$("#mac").hide("blind");
 		$("#win").hide("blind");
 		$("#otherOS").hide("blind");
+		$('#theprogressbar').attr('aria-valuenow', '75%').css('width','75%');
 		setTimeout(function(){
 			// Fade in virus, email, bootfailure, and otherissue buttons
 			$("#virus").show("blind");
@@ -89,6 +93,7 @@ $(document).ready(function()
 		$("#mac").hide("blind");
 		$("#win").hide("blind");
 		$("#otherOS").hide("blind");
+		$('#theprogressbar').attr('aria-valuenow', '75%').css('width','75%');
 		setTimeout(function(){
 			// Fade in virus, email, bootfailure, and otherissue buttons
 			$("#virus").show("blind");
@@ -105,6 +110,7 @@ $(document).ready(function()
 		$("#bootfailure").hide("blind");
 		$("#email").hide("blind");
 		$("#otherIssue").hide("blind");
+		$('#theprogressbar').attr('aria-valuenow', '100%').css('width','100%');
 		setTimeout(function(){
 			// Fade in fin button
 			$("#fin").show("blind")
@@ -118,6 +124,7 @@ $(document).ready(function()
 		$("#email").hide("blind");
 		$("#bootfailure").hide("blind");
 		$("#otherIssue").hide("blind");
+		$('#theprogressbar').attr('aria-valuenow', '100%').css('width','100%');
 		setTimeout(function(){
 			// Fade in fin button
 			$("#fin").show("blind")
@@ -131,6 +138,7 @@ $(document).ready(function()
 		$("#bootfailure").hide("blind");
 		$("#email").hide("blind");
 		$("#otherIssue").hide("blind");
+		$('#theprogressbar').attr('aria-valuenow', '100%').css('width','100%');
 		setTimeout(function(){
 			//Fade in fin button
 			$("#fin").show("blind");
@@ -144,6 +152,7 @@ $(document).ready(function()
 		$("#email").hide("blind");
 		$("#bootfailure").hide("blind");
 		$("#otherIssue").hide("blind");
+		$('#theprogressbar').attr('aria-valuenow', '100%').css('width','100%');
 		setTimeout(function(){
 			// Fade in fin button
 			$("#fin").show("blind")
@@ -154,6 +163,7 @@ $(document).ready(function()
 	$("#fin").click(function(){
 		// Fade out fin button
 		$("#fin").hide("blind");
+		$('#theprogressbar').attr('aria-valuenow', '0%').css('width','0%');
 		setTimeout(function(){
 			// Fade in start button
 			$("#start").show("fold");

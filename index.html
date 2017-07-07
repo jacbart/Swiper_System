@@ -112,9 +112,29 @@
 				 style="margin-top:1em; display:none;"
 				 id="swipe">
 				<h3>
-					Swipe Buff Onecard
+					Swipe Buff Onecard or 
 				</h3>
-				<p align="right">
+				<div class="input-group">
+					<input type="text"
+						   class="form-control" 
+						   placeholder="Identikey" 
+						   aria-label="...">
+					<span class="input-group-btn">
+						<!-- Buttons -->
+						<button type="button"
+								class="btn btn-primary btn-lg"
+								aria-label="Help"
+								style="color: blue">
+							<span class="glyphicon glyphicon-question-sign"></span>
+						</button>
+						<button type="button" 
+								class="btn btn-primary btn-lg" 
+								id="identikey">
+							Submit
+						</button>
+					</span>
+				</div>
+				<!-- <p align="right">
 					<a class="btn btn-primary btn-lg"
 					   href="#"
 					   style="font-size:20px;" 
@@ -122,7 +142,8 @@
 					   id="identikey">
 					Don't have your Buff Onecard? 
 					</a>
-				</p>
+				</p> -->
+				<!-- Card reader script -->
 				<script>
 					var uuid = "";
 					document.onkeydown = function(event)
@@ -146,6 +167,7 @@
 						}
 					}
 				</script>
+				<!-- UUID visual output -->
 				<p id="id_out">UUID:</p>
 			</div>
 			<!-- EULA -->
@@ -155,25 +177,25 @@
 				<h3>
 					Please review our Terms of Use Agreement:
 				</h3>
-				<p style="font-size:20px;">
+				<p style="font-size:18px;">
 					1. I am either the lawful owner of the computer, or I am permitted to represent the organization or person the computer belongs to.
 				</p>
-				<p style="font-size:20px;">
+				<p style="font-size:18px;">
 					2. I authorize OIT Walk-In Computer Support to access any, and all data, information, or physical parts of my computer equipment as it is necessary to perform the requested service.
 				</p>
-				<p style="font-size:20px;">
+				<p style="font-size:18px;">
 					3. I understand the work performed by OIT Walk-In Computer Support may not completely resolve any issue with the computer. Also, the work that is performed may not prevent future problems.
 				</p>
-				<p style="font-size:20px;">
+				<p style="font-size:18px;">
 					4. I understand that OIT will attempt to backup my data to assist with minimizing any data loss; however, OIT is not responsible under any circumstances for loss or corruption of data and/or software, even if the owner was unable or unwilling to backup the data prior to receiving support. (OIT will attempt to keep the backed up data for a period of up to two weeks; however, OIT reserves the right to delete the data prior to that time.)
 				</p>
-				<p style="font-size:20px;">
+				<p style="font-size:18px;">
 					5. I understand that OIT Walk-In Computer Support does not repair hardware problems. If a hardware problem is diagnosed, I may be advised to contact the vendor or a local hardware repair shop.
 				</p>
-				<p style="font-size:20px;">
+				<p style="font-size:18px;">
 					6. I understand that OIT Walk-In Computer Support is performing this service at my request and is not responsible for any damages, loss, liability, or inconvenience that result from the services provided.
 				</p>
-				<p style="font-size:20px;">
+				<p style="font-size:18px;">
 					I have read, understand, and agree to these statements, and authorize OIT Walk-In Computer Support to take reasonable and necessary actions on my computer to satisfy my service request.
 				</p>
 				<p align="right">
@@ -271,6 +293,19 @@
 					   Finish
 					</a>
 				</p>
+			</div>
+		</div>
+		<div class="row"
+			 id="footer">
+			<div class="progress">
+				<div class="progress-bar"
+					 role="progressbar"
+					 aria-valuenow="0%"
+					 aria-valuemin="0"
+					 aria-valuemax="100"
+					 style="width: 0%;"
+					 id="theprogressbar">
+				</div>
 			</div>
 		</div>
 	</div>
