@@ -69,7 +69,6 @@
 						class="btn btn-success btn-lg"
 						style="font-size:100px; display:none; padding-top:0.5em; padding-bottom:0.5em; padding-left:5em; padding-right:5em;"
 						id="start">
-					Start
 				</button>
 			</div>
 			<!-- Customer queue: Needs to be dynamic -->
@@ -114,27 +113,7 @@
 				<h3>
 					Swipe Buff Onecard or 
 				</h3>
-				<div class="input-group">
-					<input type="text"
-						   class="form-control" 
-						   placeholder="Identikey" 
-						   aria-label="...">
-					<span class="input-group-btn">
-						<!-- Buttons -->
-						<button type="button"
-								class="btn btn-primary btn-lg"
-								aria-label="Help"
-								style="color: blue">
-							<span class="glyphicon glyphicon-question-sign"></span>
-						</button>
-						<button type="button" 
-								class="btn btn-primary btn-lg" 
-								id="identikey">
-							Submit
-						</button>
-					</span>
-				</div>
-				<!-- <p align="right">
+				<p align="right">
 					<a class="btn btn-primary btn-lg"
 					   href="#"
 					   style="font-size:20px;" 
@@ -142,31 +121,7 @@
 					   id="identikey">
 					Don't have your Buff Onecard? 
 					</a>
-				</p> -->
-				<!-- Card reader script -->
-				<script>
-					var uuid = "";
-					document.onkeydown = function(event)
-					{
-						var key_code = event.keyCode;
-
-						if (95 < key_code)
-						{
-							key_code = key_code-48;
-						}	
-					
-						if (key_code == 13)
-						{
-							uuid += "-Done"
-							document.getElementById('id_out').innerHTML = uuid;
-							$("#identikey").click();
-						}
-						else
-						{
-							uuid += String.fromCharCode(key_code);
-						}
-					}
-				</script>
+				</p>
 				<!-- UUID visual output -->
 				<p id="id_out">UUID:</p>
 			</div>
@@ -306,6 +261,7 @@
 					 style="width: 0%;"
 					 id="theprogressbar">
 				</div>
+				<span class="sr-only"></span>
 			</div>
 		</div>
 	</div>
