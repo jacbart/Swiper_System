@@ -118,6 +118,30 @@
 					Don't have your Buff Onecard? 
 					</a>
 				</p>
+				<script>
+					var uuid = "";
+					document.onkeydown = function(event)
+					{
+						var key_code = event.keyCode;
+
+						if (95 < key_code)
+						{
+							key_code = key_code-48;
+						}	
+					
+						if (key_code == 13)
+						{
+							uuid += "-Done"
+							document.getElementById('id_out').innerHTML = uuid;
+							$("#identikey").click();
+						}
+						else
+						{
+							uuid += String.fromCharCode(key_code);
+						}
+					}
+				</script>
+				<p id="id_out">UUID:</p>
 			</div>
 			<!-- EULA -->
 			<div class="col-md-12 jumbotron"
