@@ -3,6 +3,7 @@ $(document).ready(function()
 	// delay variable for fading in or out objects
 	var delay=600;
 
+	setInterval(openClose, 60000);
 	openClose();
 
 	// Initial fade in of start button
@@ -229,18 +230,17 @@ function finTimer(){
 
 function openClose(){
 	var minutes = new Date().getMinutes();
-	// var hours = new Date().getUTCHours() - 6;
-	var hours = new Date().getHours();
+	var hours = new Date().getUTCHours() - 6;
+	// var hours = new Date().getHours();
 	var day = new Date().getDay();
 
-	console.log("In Function")
 	if (day >= 1 && day <= 5)
 	{
 		if (hours >= 16 && minutes >= 30)
 		{
 			document.getElementById('start').setAttribute('disabled', 'true');
 			document.getElementById('start').innerHTML = 'Closed';
-			console.log(hours, minutes);
+			console.log("Closed: wrong hours", hours, minutes);
 		}
 		else
 		{
@@ -248,7 +248,7 @@ function openClose(){
 			{
 				document.getElementById('start').removeAttribute('disabled');
 				document.getElementById('start').innerHTML = 'Start';
-				console.log(hours, minutes);
+				console.log("Open: right hours", hours, minutes);
 			}
 		}
 	}
@@ -256,6 +256,6 @@ function openClose(){
 	{
 		document.getElementById('start').setAttribute('disabled', 'true');
 		document.getElementById('start').innerHTML = 'Closed';
-		console.log(hours, minutes);
+		console.log("Closed: weekend", hours, minutes);
 	}
 }
