@@ -1,9 +1,11 @@
 $(document).ready(function()
 {
-	// delay variable for fading in or out objects
+	// Delay variable for fading in or out objects
 	var delay=600;
 
+	// Sets the run interval of the openClose function to every 60 seconds
 	setInterval(openClose, 60000);
+	// Sets the start button to open (8:00-16:30) or closed
 	openClose();
 
 	// Initial fade in of start button
@@ -197,7 +199,10 @@ $(document).ready(function()
 	});
 });
 
-function buffSwipe(){
+
+// Reads buff onecard and grabs the UUID
+function buffSwipe()
+{
 	var uuid = "";
 	document.onkeydown = function(event)
 	{
@@ -212,6 +217,7 @@ function buffSwipe(){
 		{
 			uuid += "-Done";
 			document.getElementById('id_out').innerHTML = uuid;
+			// Temp way of activating next page
 			$("#identikey").click();
 		}
 		else
@@ -232,36 +238,70 @@ function finTimer()
 
 function openClose()
 {
+	// Grabs current minutes from the computer's clock
 	var minutes = new Date().getMinutes();
+
+	// Grabs the UTC hours and subtracts 6 hours
 	// var hours = new Date().getUTCHours() - 6;
+
+	// Grabs current hour form the computer's clock
 	var hours = new Date().getHours();
+
+	// Grabs the current day of the week from the computer
 	var day = new Date().getDay();
 
+	// If between monday and friday
 	if (day >= 1 && day <= 5)
 	{
+		// If hours is 16 or higher and 30 minutes or higher
 		if (hours >= 16 && minutes >= 30)
 		{
+			// Sets element start to disabled
 			document.getElementById('start').setAttribute('disabled', 'true');
+			// Sets the text in  element start to Closed
 			document.getElementById('start').innerHTML = 'Closed';
+			// Displasys "Closed: wrong hours" and the hours, minutes variables to the console log
 			console.log("Closed: wrong hours", hours, minutes);
 		}
+		// If hours is greater than 
+		else if (hours > 16)
+		{
+			// Sets element start to disabled
+			document.getElementById('start').setAttribute('disabled', 'true');
+			// Sets the text in  element start to Closed
+			document.getElementById('start').innerHTML = 'Closed';
+			// Displasys "Closed: wrong hours" and the hours, minutes variables to the console log
+			console.log("Closed: wrong hours", hours, minutes);
+		}
+		// If hours is less than 8
 		else if (hours < 8)
 		{
+			// Sets element start to disabled
 			document.getElementById('start').setAttribute('disabled', 'true');
+			// Sets the text in  element start to Closed
 			document.getElementById('start').innerHTML = 'Closed';
+			// Displasys "Closed: wrong hours" and the hours, minutes variables to the console log
 			console.log("Closed: wrong hours", hours, minutes);
 		}
+		// If during open hours: 8:00-16:30
 		else
 		{
+			// Removes attribute disabled from element start
 			document.getElementById('start').removeAttribute('disabled');
+			// Sets the text in element start to Start
 			document.getElementById('start').innerHTML = 'Start';
+			// Displasys "Open: right hours" and the hours, minutes variables to the console log
 			console.log("Open: right hours", hours, minutes);
 		}
 	}
+	// If during the weekend
 	else
 	{
-		document.getElementById('start').setAttribute('disabled', 'true');
-		document.getElementById('start').innerHTML = 'Closed';
-		console.log("Closed: weekend", hours, minutes);
+		// Sets element start to disabled
+			document.getElementById('start').setAttribute('disabled', 'true');
+			// Sets the text in  element start to Closed
+			document.getElementById('start').innerHTML = 'Closed';
+			// Displasys "Closed: weekend" and the hours, minutes variables to the console log
+			console.log("Closed: weekend", hours, minutes);
 	}
 }

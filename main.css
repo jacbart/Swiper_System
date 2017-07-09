@@ -10,6 +10,7 @@ body
 	background-repeat: no-repeat;
 }
 
+/*Fixes the progress bar to the bottom of the page*/
 #footer {
     position: fixed;
     bottom: 0;
