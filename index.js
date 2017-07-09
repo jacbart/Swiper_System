@@ -222,16 +222,19 @@ function buffSwipe(){
 }
 
 // If finish button is not pushed then after the set time it will auto click
-function finTimer(){
-	setTimeout(function(){
+function finTimer()
+{
+	setTimeout(function()
+	{
 		$("#fin").click();
 	}, 15000); // 15 second timer
 }
 
-function openClose(){
+function openClose()
+{
 	var minutes = new Date().getMinutes();
-	var hours = new Date().getUTCHours() - 6;
-	// var hours = new Date().getHours();
+	// var hours = new Date().getUTCHours() - 6;
+	var hours = new Date().getHours();
 	var day = new Date().getDay();
 
 	if (day >= 1 && day <= 5)
@@ -242,14 +245,17 @@ function openClose(){
 			document.getElementById('start').innerHTML = 'Closed';
 			console.log("Closed: wrong hours", hours, minutes);
 		}
+		else if (hours < 8)
+		{
+			document.getElementById('start').setAttribute('disabled', 'true');
+			document.getElementById('start').innerHTML = 'Closed';
+			console.log("Closed: wrong hours", hours, minutes);
+		}
 		else
 		{
-			if(hours >= 8)
-			{
-				document.getElementById('start').removeAttribute('disabled');
-				document.getElementById('start').innerHTML = 'Start';
-				console.log("Open: right hours", hours, minutes);
-			}
+			document.getElementById('start').removeAttribute('disabled');
+			document.getElementById('start').innerHTML = 'Start';
+			console.log("Open: right hours", hours, minutes);
 		}
 	}
 	else
