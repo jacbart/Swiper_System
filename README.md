@@ -2,7 +2,8 @@
 	1. Start page
 		- [ ] add ability to enter Identikey
 		- [ ] Queue of customers
-		- [ ] Close and open during proper hours/Make hours easily editable
+		- [x] Close and open during proper hours(8:00-16:30)
+		- [ ] Make hours easily editable
 	2. User Agreement
 		- [x] Create a EULA page for the customer to accept
 	3. Selection Pages
