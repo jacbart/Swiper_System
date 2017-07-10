@@ -1,5 +1,8 @@
 $(document).ready(function()
 {
+	// Display the Navbar
+	globalNavbar();
+
 	// Delay variable for fading in or out objects
 	var delay=600;
 
@@ -242,10 +245,10 @@ function openClose()
 	var minutes = new Date().getMinutes();
 
 	// Grabs the UTC hours and subtracts 6 hours
-	// var hours = new Date().getUTCHours() - 6;
+	var hours = new Date().getUTCHours() - 6;
 
 	// Grabs current hour form the computer's clock
-	var hours = new Date().getHours();
+	// var hours = new Date().getHours();
 
 	// Grabs the current day of the week from the computer
 	var day = new Date().getDay();
@@ -304,4 +307,27 @@ function openClose()
 			// Displasys "Closed: weekend" and the hours, minutes variables to the console log
 			console.log("Closed: weekend", hours, minutes);
 	}
+}
+
+// Function to create a navbar that is global to all html pages
+function globalNavbar()
+{
+	var bar = `
+	<div class="row">
+			<!-- Top bar with the CU Buffs logo on it -->
+			<nav class="navbar navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<!-- CU Buffs logo -->
+						<a class="navbar-brand" href="admin.html">
+							<img src="CU-Buffs.png">
+						</a>
+					</div>
+					<!-- Title for the navbar -->
+					<h3>Walk-In Computer Support</h3>
+				</div>
+			</nav>
+		</div>`;
+	// At the beginning of the body display the navbar
+	$('body').prepend(bar);
 }
