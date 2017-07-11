@@ -43,23 +43,38 @@
 	
 	<!-- Loading index.js -->
 	<script type="text/javascript"
-			src="index.js">
+			src="admin.js">
 	</script>
 </head>
 
 <body>
 	<div class="container">
+		<div class="row">
+			<!-- Top bar with the CU Buffs logo on it -->
+			<nav class="navbar navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<!-- CU Buffs logo -->
+						<a class="navbar-brand" href="index.html">
+							<img src="CU-Buffs.png">
+						</a>
+					</div>
+					<!-- Title for the navbar -->
+					<h3>Walk-In Computer Support - Admin Page</h3>
+				</div>
+			</nav>
+		</div>
 		<div class="row"
 			 style="padding-top:8em;">
-			<div class="jumbotron col-md-12">
-				<div class="row"><p><b>Select Working Hours:</b></p></div>
+			<div class="jumbotron-admin col-md-12">
+				<div class="row"><font color="#dddddd"><p><b>Select Working Hours:</b></p></font></div>
 				<div class="weekDays-selector">
 					<div class="row">
 						<input type="checkbox" id="weekday-mon" class="weekday" />
 						<label for="weekday-mon">M</label>
-						From:
+						<font color="#dddddd">From:</font>
 						<select id="m-selHour">
-							<option selected="selected" value="">Select Hour</option>
+							<option selected="selected" value="">Hour</option>
 							<option value="00">00</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
@@ -85,9 +100,45 @@
 							<option value="22">22</option>
 							<option value="23">23</option>
 						</select>
-						To:
+						<font color="#dddddd">:</font>
 						<select id="m-selMin">
-							<option selected="selected" value="">Select Minute</option>
+							<option selected="selected" value="">Minute</option>
+							<option value="00">00</option>
+							<option value="15">15</option>
+							<option value="30">30</option>
+							<option value="45">45</option>
+						</select>
+						<font color="#dddddd">To:</font>
+						<select id="m-selHour">
+							<option selected="selected" value="">Hour</option>
+							<option value="00">00</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<font color="#dddddd">:</font>
+						<select id="m-selMin">
+							<option selected="selected" value="">Minute</option>
 							<option value="00">00</option>
 							<option value="15">15</option>
 							<option value="30">30</option>
@@ -97,9 +148,9 @@
 					<div class="row">
 						<input type="checkbox" id="weekday-tue" class="weekday" />
 						<label for="weekday-tue">T</label>
-						From:
+						<font color="#dddddd">From:</font>
 						<select id="t-selHour">
-							<option selected="selected" value="">Select Hour</option>
+							<option selected="selected" value="">Hour</option>
 							<option value="00">00</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
@@ -125,9 +176,45 @@
 							<option value="22">22</option>
 							<option value="23">23</option>
 						</select>
-						To:
+						<font color="#dddddd">:</font>
 						<select id="t-selMin">
-							<option selected="selected" value="">Select Minute</option>
+							<option selected="selected" value="">Minute</option>
+							<option value="00">00</option>
+							<option value="15">15</option>
+							<option value="30">30</option>
+							<option value="45">45</option>
+						</select>
+						<font color="#dddddd">To:</font>
+						<select id="t-selHour">
+							<option selected="selected" value="">Hour</option>
+							<option value="00">00</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<font color="#dddddd">:</font>
+						<select id="t-selMin">
+							<option selected="selected" value="">Minute</option>
 							<option value="00">00</option>
 							<option value="15">15</option>
 							<option value="30">30</option>
@@ -137,9 +224,9 @@
 					<div class="row">
 						<input type="checkbox" id="weekday-wed" class="weekday" />
 						<label for="weekday-wed">W</label>
-						From:
+						<font color="#dddddd">From:</font>
 						<select id="w-selHour">
-							<option selected="selected" value="">Select Hour</option>
+							<option selected="selected" value="">Hour</option>
 							<option value="00">00</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
@@ -165,9 +252,45 @@
 							<option value="22">22</option>
 							<option value="23">23</option>
 						</select>
-						To:
+						<font color="#dddddd">:</font>
 						<select id="w-selMin">
-							<option selected="selected" value="">Select Minute</option>
+							<option selected="selected" value="">Minute</option>
+							<option value="00">00</option>
+							<option value="15">15</option>
+							<option value="30">30</option>
+							<option value="45">45</option>
+						</select>
+						<font color="#dddddd">To:</font>
+						<select id="w-selHour">
+							<option selected="selected" value="">Hour</option>
+							<option value="00">00</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<font color="#dddddd">:</font>
+						<select id="w-selMin">
+							<option selected="selected" value="">Minute</option>
 							<option value="00">00</option>
 							<option value="15">15</option>
 							<option value="30">30</option>
@@ -177,9 +300,9 @@
 					<div class="row">
 						<input type="checkbox" id="weekday-thu" class="weekday" />
 						<label for="weekday-thu">T</label>
-						From:
+						<font color="#dddddd">From:</font>
 						<select id="th-selHour">
-							<option selected="selected" value="">Select Hour</option>
+							<option selected="selected" value="">Hour</option>
 							<option value="00">00</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
@@ -205,9 +328,45 @@
 							<option value="22">22</option>
 							<option value="23">23</option>
 						</select>
-						To:
+						<font color="#dddddd">:</font>
 						<select id="th-selMin">
-							<option selected="selected" value="">Select Minute</option>
+							<option selected="selected" value="">Minute</option>
+							<option value="00">00</option>
+							<option value="15">15</option>
+							<option value="30">30</option>
+							<option value="45">45</option>
+						</select>
+						<font color="#dddddd">To:</font>
+						<select id="th-selHour">
+							<option selected="selected" value="">Hour</option>
+							<option value="00">00</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<font color="#dddddd">:</font>
+						<select id="th-selMin">
+							<option selected="selected" value="">Minute</option>
 							<option value="00">00</option>
 							<option value="15">15</option>
 							<option value="30">30</option>
@@ -217,9 +376,9 @@
 					<div class="row">
 						<input type="checkbox" id="weekday-fri" class="weekday" />
 						<label for="weekday-fri">F</label>
-						From:
+						<font color="#dddddd">From:</font>
 						<select id="f-selHour">
-							<option selected="selected" value="">Select Hour</option>
+							<option selected="selected" value="">Hour</option>
 							<option value="00">00</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
@@ -245,9 +404,45 @@
 							<option value="22">22</option>
 							<option value="23">23</option>
 						</select>
-						To:
+						<font color="#dddddd">:</font>
 						<select id="f-selMin">
-							<option selected="selected" value="">Select Minute</option>
+							<option selected="selected" value="">Minute</option>
+							<option value="00">00</option>
+							<option value="15">15</option>
+							<option value="30">30</option>
+							<option value="45">45</option>
+						</select>
+						<font color="#dddddd">To:</font>
+						<select id="f-selHour">
+							<option selected="selected" value="">Hour</option>
+							<option value="00">00</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<font color="#dddddd">:</font>
+						<select id="f-selMin">
+							<option selected="selected" value="">Minute</option>
 							<option value="00">00</option>
 							<option value="15">15</option>
 							<option value="30">30</option>
@@ -257,9 +452,9 @@
 					<div class="row">
 						<input type="checkbox" id="weekday-sat" class="weekday" />
 						<label for="weekday-sat">S</label>
-						From:
+						<font color="#dddddd">From:</font>
 						<select id="sa-selHour">
-							<option selected="selected" value="">Select Hour</option>
+							<option selected="selected" value="">Hour</option>
 							<option value="00">00</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
@@ -285,9 +480,45 @@
 							<option value="22">22</option>
 							<option value="23">23</option>
 						</select>
-						To:
+						<font color="#dddddd">:</font>
 						<select id="sa-selMin">
-							<option selected="selected" value="">Select Minute</option>
+							<option selected="selected" value="">Minute</option>
+							<option value="00">00</option>
+							<option value="15">15</option>
+							<option value="30">30</option>
+							<option value="45">45</option>
+						</select>
+						<font color="#dddddd">To:</font>
+						<select id="sa-selHour">
+							<option selected="selected" value="">Hour</option>
+							<option value="00">00</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<font color="#dddddd">:</font>
+						<select id="sa-selMin">
+							<option selected="selected" value="">Minute</option>
 							<option value="00">00</option>
 							<option value="15">15</option>
 							<option value="30">30</option>
@@ -297,9 +528,9 @@
 					<div class="row">
 						<input type="checkbox" id="weekday-sun" class="weekday" />
 						<label for="weekday-sun">S</label>
-						From:
+						<font color="#dddddd">From:</font>
 						<select id="su-selHour">
-							<option selected="selected" value="">Select Hour</option>
+							<option selected="selected" value="">Hour</option>
 							<option value="00">00</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
@@ -325,9 +556,45 @@
 							<option value="22">22</option>
 							<option value="23">23</option>
 						</select>
-						To:
+						<font color="#dddddd">:</font>
 						<select id="su-selMin">
-							<option selected="selected" value="">Select Minute</option>
+							<option selected="selected" value="">Minute</option>
+							<option value="00">00</option>
+							<option value="15">15</option>
+							<option value="30">30</option>
+							<option value="45">45</option>
+						</select>
+						<font color="#dddddd">To:</font>
+						<select id="su-selHour">
+							<option selected="selected" value="">Hour</option>
+							<option value="00">00</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+						</select>
+						<font color="#dddddd">:</font>
+						<select id="su-selMin">
+							<option selected="selected" value="">Minute</option>
 							<option value="00">00</option>
 							<option value="15">15</option>
 							<option value="30">30</option>
@@ -339,7 +606,7 @@
 				<a href="index.html"
 				   class="btn btn-default btn-lg pull-right"
 				   type="button">
-					Back to start page
+					Save
 				</a>
 			</div>
 		</div>

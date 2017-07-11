@@ -1,8 +1,5 @@
 $(document).ready(function()
 {
-	// Display the Navbar
-	globalNavbar();
-
 	// Delay variable for fading in or out objects
 	var delay=600;
 
@@ -245,10 +242,10 @@ function openClose()
 	var minutes = new Date().getMinutes();
 
 	// Grabs the UTC hours and subtracts 6 hours
-	var hours = new Date().getUTCHours() - 6;
+	// var hours = new Date().getUTCHours() - 6;
 
 	// Grabs current hour form the computer's clock
-	// var hours = new Date().getHours();
+	var hours = new Date().getHours();
 
 	// Grabs the current day of the week from the computer
 	var day = new Date().getDay();
@@ -256,28 +253,8 @@ function openClose()
 	// If between monday and friday
 	if (day >= 1 && day <= 5)
 	{
-		// If hours is 16 or higher and 30 minutes or higher
-		if (hours >= 16 && minutes >= 30)
-		{
-			// Sets element start to disabled
-			document.getElementById('start').setAttribute('disabled', 'true');
-			// Sets the text in  element start to Closed
-			document.getElementById('start').innerHTML = 'Closed';
-			// Displasys "Closed: wrong hours" and the hours, minutes variables to the console log
-			console.log("Closed: wrong hours", hours, minutes);
-		}
-		// If hours is greater than 
-		else if (hours > 16)
-		{
-			// Sets element start to disabled
-			document.getElementById('start').setAttribute('disabled', 'true');
-			// Sets the text in  element start to Closed
-			document.getElementById('start').innerHTML = 'Closed';
-			// Displasys "Closed: wrong hours" and the hours, minutes variables to the console log
-			console.log("Closed: wrong hours", hours, minutes);
-		}
-		// If hours is less than 8
-		else if (hours < 8)
+		// If hours is greater than 16 or If hours is 16 or higher and 30 minutes or higher or If hours is less than 8
+		if ((hours > 16) || (hours >= 16 && minutes >= 30) || (hours < 8))
 		{
 			// Sets element start to disabled
 			document.getElementById('start').setAttribute('disabled', 'true');
@@ -309,44 +286,6 @@ function openClose()
 	}
 }
 
-// Function to create a navbar that is global to all html pages
-function globalNavbar()
-{
-	var bar = `
-	<div class="row">
-			<!-- Top bar with the CU Buffs logo on it -->
-			<nav class="navbar navbar-fixed-top">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<!-- CU Buffs logo -->
-						<a class="navbar-brand" href="admin.html">
-							<img src="CU-Buffs.png">
-						</a>
-					</div>
-					<!-- Title for the navbar -->
-					<h3>Walk-In Computer Support</h3>
-				</div>
-			</nav>
-		</div>`;
-	// At the beginning of the body display the navbar
-	$('body').prepend(bar);
-}
-
-// function setHours()
-// {
-// 	var now = new Date();
-// 	var weekday = new Array(7);
-// 	weekday[0] = "Sunday";
-// 	weekday[1] = "Monday";
-// 	weekday[2] = "Tuesday";
-// 	weekday[3] = "Wednesday";
-// 	weekday[4] = "Thursday";
-// 	weekday[5] = "Friday";
-// 	weekday[6] = "Saturday";
-
-
-// }
-
 function getTimes()
 {
 	var mh = document.getElementById("m-selHour").value;
@@ -364,8 +303,10 @@ function getTimes()
 	var fm = document.getElementById("f-selMin").value;
 	var sam = document.getElementById("sa-selMin").value;
 	var sum = document.getElementById("su-selMin").value;
-}
 
+	setTimes(mh,);
+}
+// redis database/ mongo
 function setTimes()
 {
 	var t = ['mh','mm','th','tm','wh','wm','thh','thm','fh','fm','sah','sam','suh','sum'];
